@@ -1,0 +1,17 @@
+<section class="container" ng-controller="noteCtrl">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-0 col-lg-8 col-lg-offset-0">
+      <div class="video-container">
+        <youtube-video player="yt.player" player-vars="yt.vars" video-id="yt.video"></youtube-video>
+      </div>
+    </div>
+    <div class="col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0">
+      <form>
+        <button type="submit" class="border-button" ng-click="yt.addNote()">Botón!</button>
+      </form>
+      <ul>
+        <li ng-repeat="time in times track by $index">{{time}}</li>
+      </ul>
+    </div>
+  </div>
+</section>

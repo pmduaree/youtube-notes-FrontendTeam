@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="dashboardApp">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard View</title>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+  <script src="../_common/lib/bower_components/angular/angular.min.js"></script>
+  <script src="../_common/lib/bower_components/angular-route/angular-route.min.js"></script>
+  <script src="../_common/lib/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="../_common/lib/bower_components/angular-youtube-mb/src/angular-youtube-embed.js"></script>
+
+  <script src="./js/dashboard.app.js"></script>
+  <script src="./js/controllers/note.controller.js"></script>
+
+  <link rel="stylesheet" href="../_common/lib/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="../_common/assets/css/style.css">
+</head>
+
+<body data-target=".navbar-fixed-top">
+barrita
+ <div ng-include="'./views/note.view.html'"></div>
+footer
+</body>
+</html>
