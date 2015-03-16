@@ -1,3 +1,5 @@
+body { padding-top: 70px; }
+
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -24,3 +26,16 @@ max-width: 640px;
 li {
 /*  TEMPORAL */
 }
+
+.startTime {
+   
+}
+
+.endTime {
+  position: relative;
+  bottom: 10px; 
+}
+
+
+
+

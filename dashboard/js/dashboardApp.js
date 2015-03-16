@@ -1,0 +1,1 @@
+dashboardApp = angular.module('dashboardApp', ['youtube-embed', 'ui.bootstrap','ngRoute'])
