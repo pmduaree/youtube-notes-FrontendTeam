@@ -2,12 +2,12 @@ angular.module('dashboardApp')
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/dashboard.view.html',
-        controller: 'dashboard.contoller.js'
+        templateUrl: 'views/home.view.html',
+        controller: 'dashboardCtrl'
       })
       .when('/note', {
-        templateUrl: 'views/note.view.html',
-        controller: 'note.controller.js'
+        templateUrl: 'views/editor.view.html',
+        controller: 'editorCtrl'
       })
       .otherwise('/');
   }]).run(function ($rootScope, $window) {

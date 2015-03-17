@@ -1,7 +1,4 @@
-dashboardApp.controller('masterController', function($scope){
-    $scope.items = [
-        "The first choice!",
-        "And another choice for you.",
-        "but wait! A third!"
-    ];
-});
+angular.module('dashboardApp')
+  .controller('masterController', function ($scope) {
+
+  });
