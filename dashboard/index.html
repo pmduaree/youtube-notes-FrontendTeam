@@ -23,7 +23,7 @@
 
 </head>
 
-<body data-target=".navbar-fixed-top" ng-controller="masterController">
+<body data-target=".navbar-fixed-top" data-ng-controller="masterController">
 
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="navbar-header">
@@ -44,9 +44,9 @@
       </ul>
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <input type="text" class="form-control" ng-model="video.url" placeholder="Search">
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button ng-click='loadVideo()' type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Log Out</a>
@@ -57,53 +57,8 @@
   </nav>
 
 
-  <section class="container" ng-controller="editorCtrl">
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-        <div class="video-container">
-          <youtube-video player="yt.player" player-vars="yt.vars" video-URL="yt.video"></youtube-video>
-        </div>
-      </div>
-      <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-        <tabset>
-          <tab heading="Notes" active="true">
-            <div class="table-responsive">
-              <table class="table table-striped">
-                <thead ng-init="updateNotes()" ng-click="addNote()">
-                  <tr>
-                    <th></th>
-                    <th>Note</th>
-                  </tr>
-                </thead>
-                <!--                for each note on block, generate a row.-->
-                <tbody>
-                  <tr ng-repeat="note in testMessages | orderBy:'startTime'">
-                    <td class="col-xs-1 timeCell">
-                      <div class="timeContainer">
-                        <div class="startTime">{{note.startTime}}</div>
-                        <div class="endTime">{{note.endTime}}</div>
-                      </div>
-                    </td>
-                    <td class="noteTextCell" ng-dblclick="editItem(note)">
-                      <div class="noteContent">
-                        <p contenteditable="{{note.editMode}}">{{note.content}}</p>
-                      </div>
-<!--                      <input ng-show="note.editMode" ng-model="note.content" ng-blur="doneEditing(note)" autofocus />-->
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </tab>
-          <tab heading="Comments" disabled="false">
-            <!--           COMMENTS CONTENTS     -->
-          </tab>
-        </tabset>
-      </div>
-    </div>
-  </section>
+<div ng-view=""></div>
 
-  <!--  <div ng-view=""></div>-->
 
 
 
